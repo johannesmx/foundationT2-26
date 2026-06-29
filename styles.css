@@ -2,6 +2,7 @@ body {
     background-color: hsl(16, 92%, 75%);
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-y: scroll;
 }
 .logo {
     width: 100px;
@@ -43,4 +44,12 @@ body {
 }
 .user-nav {
     display: flex;
+}
+.slide {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1e1e1;
 }
