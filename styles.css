@@ -8,8 +8,39 @@ body {
 }
 .header {
     background-color: #1A1A1A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .navigation a {
     color:#e1e1e1;
     text-decoration: none;
+    padding: 15px;
+}
+.navigation {
+    width:100%;
+    display: flex;
+    gap: 30px;
+}
+.search {
+    width: 40vw;
+}
+.search input {
+    min-width: 100%;
+    display: block;
+    padding: 10px;
+    border-style: solid;
+    border-color: #595959;
+    border-radius: 10px;
+}
+.user-nav a {
+    color: #e1e1e1;
+    font-size: 32px;
+    text-decoration: none;
+    padding: 10px;
+}
+.user-nav {
+    display: flex;
 }
