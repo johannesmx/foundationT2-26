@@ -62,7 +62,9 @@ include "includes/database.php";
                 $image = $item['image'];
                 echo 
                 "<div class='card'>
-                    <h4>$name</h4>
+                    <img class='product-image' src='ProductImages/$image'>
+                    <h4 class='product-name'>$name</h4>
+                    <p class='product-brand'>$brand</p>
                 </div>";
             }
             ?>
