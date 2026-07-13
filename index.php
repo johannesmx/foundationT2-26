@@ -1,3 +1,6 @@
+<?php
+include "includes/database.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,5 +42,31 @@
         <div class="slide">Four</div>
         <div class="slide">Five</div>
     </div>
+    <main class="content">
+        <div class="products">
+            <?php 
+            $query = "SELECT id,name,brand,image FROM productdata";
+            // statement
+            $statement = $connection -> prepare($query);
+            $statement -> execute();
+            $products = array();
+            $result = $statement -> get_result();
+            while( $row = $result -> fetch_assoc() ) {
+                array_push( $products, $row );
+            }
+            // output products into page as html
+            foreach( $products as $item ) {
+                $id = $item['id'];
+                $name = $item['name'];
+                $brand = $item['brand'];
+                $image = $item['image'];
+                echo 
+                "<div class='card'>
+                    <h4>$name</h4>
+                </div>";
+            }
+            ?>
+        </div>
+    </main>
 </body>
 </html>
