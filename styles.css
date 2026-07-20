@@ -79,6 +79,7 @@ body {
     min-width: 10em;
     color: white;
     background-color: green;
+    border: solid white 1px;
 }
 .price {
     font-size: 2em;
@@ -86,5 +87,11 @@ body {
 }
 .price::before {
     content: "AU$";
+}
+.brand {
+    display: inline-block;
+    color: white;
+    padding: 0.5em;
+    background-color: black;
 }
 

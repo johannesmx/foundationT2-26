@@ -49,12 +49,17 @@ else {
                     <h2 class="name"><?php echo $name; ?></h2>
                     <?php 
                         echo "<p class='description'>$description</p>";
-                        echo "<p>$brand</p>";
+                        echo "<p>Brand <span class='brand'>$brand</span></p>";
                         echo "<p>$category</p>";
                         echo "<p class='price'>$price</p>";
-                        echo "<button class='cart-button'>
+                        echo "
+                        <form>
+                            <input readonly type='hidden' value='$price'>
+                            <input type='number' value='1' min='1' step='1'>
+                            <button class='cart-button'>
                                 Add to cart
-                                </button>";
+                            </button>
+                        </form>";
                     ?>
                 </div>
             </div>
