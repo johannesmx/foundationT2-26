@@ -1,6 +1,10 @@
 <?php
 include "includes/database.php";
-if( $_GET['id'] ) {
+if( !isset($_GET['id'] ) ) {
+    echo "Product id is required. Go to <a href='/'>Home</a> and select a product";
+    die();
+}
+else {
     $id = $_GET['id'];
     // echo "Detail page for $id";
     // get the product details from database
