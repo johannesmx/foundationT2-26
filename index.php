@@ -3,37 +3,9 @@ include "includes/database.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progear Hub Home Page</title>
-    <link href="styles.css" rel="stylesheet">
-    <link href="ProgearHub_Logo.png" rel="icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-</head>
+<?php include "fragment/head.php"; ?>
 <body>
-    <header class="header">
-        <img class="logo" src="ProgearHub_Logo.png">
-        <form class="search" method="get" action="search">
-            <input type="search" placeholder="search for a product">
-        </form>
-        <nav class="user-nav">
-            <a href="favourites.html">
-                <i class="fa-solid fa-heart"></i>
-            </a>
-            <a href="cart.html">
-                <i class="fa-solid fa-bag-shopping"></i>
-            </a>
-        </nav>
-        <nav class="navigation">
-            <a href="men.html">Men</a>
-            <a href="women.html">Women</a>
-            <a href="kids.html">Kids</a>
-            <a href="accessories.html">Accessories</a>
-        </nav>
-    </header>
+   <?php include "fragment/header.php"; ?>
     <!-- carousel -->
     <div class="slideshow" data-flickity='{"cellAlign":"left","contain":true}'>
         <div class="slide">One</div>
