@@ -1,5 +1,7 @@
 <header class="header">
-    <img class="logo" src="ProgearHub_Logo.png">
+    <a href="/">
+        <img class="logo" src="ProgearHub_Logo.png">
+    </a>
     <form class="search" method="get" action="search">
         <input type="search" placeholder="search for a product">
     </form>

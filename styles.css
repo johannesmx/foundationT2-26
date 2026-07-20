@@ -66,3 +66,25 @@ body {
     aspect-ratio: 1/1;
     object-fit: cover;
 }
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+}
+.name {
+    margin-top: 0px;
+}
+.cart-button {
+    padding: 1em;
+    min-width: 10em;
+    color: white;
+    background-color: green;
+}
+.price {
+    font-size: 2em;
+    font-weight: bold;
+}
+.price::before {
+    content: "AU$";
+}
+
