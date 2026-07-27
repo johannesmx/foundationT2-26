@@ -95,10 +95,24 @@ body {
     padding: 0.5em;
     background-color: black;
 }
-.product-button {
+.product-button, .search-link {
     background-color: #333333;
     color: white;
     text-decoration: none;
     padding: 10px;
+}
+/* search */
+.search-row {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+.search-image {
+    display: block;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
 }
 

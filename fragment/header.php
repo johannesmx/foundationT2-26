@@ -2,14 +2,14 @@
     <a href="/">
         <img class="logo" src="ProgearHub_Logo.png">
     </a>
-    <form class="search" method="get" action="search">
-        <input type="search" placeholder="search for a product">
+    <form class="search" method="get" action="search.php">
+        <input name="query" type="search" placeholder="search for a product">
     </form>
     <nav class="user-nav">
         <a href="favourites.html">
             <i class="fa-solid fa-heart"></i>
         </a>
-        <a href="cart.html">
+        <a href="cart.php">
             <i class="fa-solid fa-bag-shopping"></i>
         </a>
     </nav>
