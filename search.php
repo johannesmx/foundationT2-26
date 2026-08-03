@@ -46,5 +46,6 @@ else {
             }
         ?>
    </main>
+   <?php include "fragment/footer.php"; ?>
 </body>
 </html>

@@ -47,5 +47,6 @@ include "includes/database.php";
             ?>
         </div>
     </main>
+   <?php include "fragment/footer.php"; ?>
 </body>
 </html>

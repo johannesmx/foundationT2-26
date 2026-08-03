@@ -14,6 +14,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    padding: 0.5rem 2rem;
 }
 .navigation a {
     color:#e1e1e1;
@@ -114,5 +115,21 @@ body {
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
+}
+
+.main-footer {
+    background-color: #1A1A1A;
+    min-height: 5rem;
+    padding: 1em 2em;
+}
+.footer-nav a {
+    color:#e1e1e1;
+    text-decoration: none;
+}
+.footer-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
