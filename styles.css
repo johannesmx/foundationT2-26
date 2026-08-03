@@ -132,4 +132,35 @@ body {
     justify-content: center;
     gap: 2rem;
 }
+#contact-form {
+    margin: 1em auto;
+    width: min(80vw,500px);
+}
+.group {
+   display: flex;
+   flex-flow: column nowrap;
+   margin-bottom: 1em;
+}
+.group input, 
+.group select,
+.group textarea 
+{
+    border: 1px solid #595959;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.buttons button {
+    padding: 0.5rem;
+    min-width: 8rem;
+    border: 1px solid #595959;
+    border-radius: 0.5rem;
+    background-color: #1A1A1A;
+    color: #e1e1e1;
+}
 
