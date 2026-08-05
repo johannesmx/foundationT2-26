@@ -15,5 +15,6 @@
    <?php include "fragment/header.php"; ?>
    <main class="content">
    </main>
+    <?php include "fragment/footer.php"; ?>
 </body>
 </html>
