@@ -17,11 +17,19 @@ else {
     <main class="content">
         <div class="products">
             <?php
-            $query = "SELECT id,name,brand,image FROM productdata WHERE category=?";
+            if( $category == 0 ) {
+                $query = "SELECT id,name,brand,image FROM productdata";
+            }
+            else {
+                $query = "SELECT id,name,brand,image FROM productdata WHERE category=?";
+            }
+            
             // statement
             $statement = $connection->prepare($query);
             // insert category into the query
-            $statement -> bind_param("i", $category );
+            if ( $category != 0 ) {
+                $statement -> bind_param("i", $category );
+            }
             $statement->execute();
             $products = array();
             $result = $statement->get_result();

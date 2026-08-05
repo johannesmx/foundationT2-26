@@ -14,6 +14,7 @@
         </a>
     </nav>
     <nav class="navigation">
+        <a href="category.php?category=0">All Products</a>
         <a href="category.php?category=3">Men</a>
         <a href="category.php?category=2">Women</a>
         <a href="category.php?category=4">Kids</a>

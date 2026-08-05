@@ -3,6 +3,9 @@ body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     overflow-y: scroll;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 .logo {
     width: 100px;
