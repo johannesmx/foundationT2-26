@@ -45,6 +45,13 @@ body {
     font-size: 32px;
     text-decoration: none;
     padding: 10px;
+    position: relative;
+}
+.cart-count {
+    position: absolute;
+    font-size: 0.8rem;
+    right: 0px;
+    top: 0px;
 }
 .user-nav {
     display: flex;
@@ -165,5 +172,18 @@ body {
     border-radius: 0.5rem;
     background-color: #1A1A1A;
     color: #e1e1e1;
+}
+.detail-group {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.category-link {
+    text-transform: capitalize;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    background-color: black;
+    color: white;
+    padding: 0.5em;
 }
 

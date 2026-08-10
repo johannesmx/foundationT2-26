@@ -1,4 +1,6 @@
 <?php
+include  "includes/session.php";
+include  "includes/shopping_cart.php";
 include "includes/database.php";
 $success = false;
 // if the form is submitted
@@ -27,7 +29,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php 
             if( $success == true ) {
                 echo "
-                <dialog id='success'>
+                <dialog id='success'dialog>
                     Thank you for contacting us. 
                     <button commandFor='success' command='close'>Close</button>
                 </dialog>

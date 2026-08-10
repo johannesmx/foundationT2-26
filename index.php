@@ -1,4 +1,6 @@
 <?php
+include  "includes/session.php";
+include  "includes/shopping_cart.php";
 include "includes/database.php";
 ?>
 <!DOCTYPE html>

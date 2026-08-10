@@ -1,3 +1,9 @@
+<?php 
+$count = 0;
+if( isset( $_SESSION['cart']) ) {
+    $count = count( $_SESSION['cart'] );
+}
+?>
 <header class="header">
     <a href="/">
         <img class="logo" src="ProgearHub_Logo.png">
@@ -11,6 +17,7 @@
         </a>
         <a href="cart.php">
             <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count"><?php echo $count; ?></span>
         </a>
     </nav>
     <nav class="navigation">
