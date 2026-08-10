@@ -1,6 +1,9 @@
 <?php
 // echo "search";
+include "includes/session.php";
+include "includes/shopping_cart.php";
 include "includes/database.php";
+
 if( isset( $_GET['query'] ) ) {
     $search_query = $_GET['query'];
 }

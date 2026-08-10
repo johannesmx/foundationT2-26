@@ -1,12 +1,7 @@
 <?php
-// echo "search";
-// include "includes/database.php";
-// if( isset( $_GET['query'] ) ) {
-//     $search_query = $_GET['query'];
-// }
-// else {
-//     die("Search query needed");
-// }
+include "includes/session.php";
+include "includes/shopping_cart.php";
+include "includes/database.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -3,6 +3,9 @@ body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     overflow-y: scroll;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 .logo {
     width: 100px;
@@ -57,6 +60,10 @@ body {
 .content {
     margin: 3em 2em;
 }
+.detail {
+    max-width: min(90vw,1280px);
+    margin: 3em auto;
+}
 .products {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -73,6 +80,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 3em;
 }
+
 .name {
     margin-top: 0px;
 }
@@ -162,5 +170,13 @@ body {
     border-radius: 0.5rem;
     background-color: #1A1A1A;
     color: #e1e1e1;
+}
+.detail-group {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.detail-group > input[type='number'] {
+    width: min(5rem,50%);
 }
 

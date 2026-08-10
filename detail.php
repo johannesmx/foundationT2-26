@@ -1,5 +1,8 @@
 <?php
+include "includes/session.php";
+include "includes/shopping_cart.php";
 include "includes/database.php";
+
 if( !isset($_GET['id'] ) ) {
     echo "Product id is required. Go to <a href='/'>Home</a> and select a product";
     die();
@@ -9,15 +12,19 @@ else {
     // echo "Detail page for $id";
     // get the product details from database
     $query = "
-    SELECT 
-    id,
-    name,
-    description,
+    SELECT
+    productdata.id AS pid,
+    productdata.name AS pname,
+    productdata.description AS description,
     price,
-    category,
+    category AS cid,
     brand,
-    image 
-    FROM productdata WHERE id = ?";
+    image,
+    category.name AS cname
+    FROM productdata 
+    INNER JOIN category
+    ON productdata.category = category.id
+    WHERE productdata.id = ?";
     // send the query to the database
     $statement = $connection -> prepare($query);
     // bind the product id to the query
@@ -28,13 +35,14 @@ else {
     $product = array();
     $row = $result -> fetch_assoc();
     array_push( $product, $row );
-    $id = $product[0]['id'];
-    $name = $product[0]['name'];
+    $id = $product[0]['pid'];
+    $name = $product[0]['pname'];
     $description = $product[0]['description'];
     $price = $product[0]['price'];
-    $category = $product[0]['category'];
+    $category = $product[0]['cname'];
     $brand = $product[0]['brand'];
     $image = $product[0]['image'];
+    $categoryid = $product[0]['cid'];
 }
 ?>
 <!DOCTYPE html>
@@ -42,7 +50,7 @@ else {
     <?php include "fragment/head.php"; ?>
     <body>
         <?php include "fragment/header.php"; ?>
-        <main class="content">
+        <main class="content detail">
             <div class="product-detail">
                 <img class="product-image" src="ProductImages/<?php echo $image; ?>" >
                 <div>
@@ -50,15 +58,17 @@ else {
                     <?php 
                         echo "<p class='description'>$description</p>";
                         echo "<p>Brand <span class='brand'>$brand</span></p>";
-                        echo "<p>$category</p>";
+                        echo "<p class='category-name'>$category</p>";
                         echo "<p class='price'>$price</p>";
                         echo "
                         <form>
                             <input readonly type='hidden' value='$price'>
-                            <input type='number' value='1' min='1' step='1'>
-                            <button class='cart-button'>
-                                Add to cart
-                            </button>
+                            <div class='detail-group'>
+                                <input type='number' value='1' min='1' step='1'>
+                                <button class='cart-button'>
+                                    Add to cart
+                                </button>
+                            </div>
                         </form>";
                     ?>
                 </div>
