@@ -61,11 +61,12 @@ else {
                         echo "<p class='category-name'>$category</p>";
                         echo "<p class='price'>$price</p>";
                         echo "
-                        <form>
-                            <input readonly type='hidden' value='$price'>
+                        <form action='addtocart.php' method='post'>
+                            <input name='price' readonly type='hidden' value='$price'>
+                            <input name='id' readonly type='hidden' value='$id'>
                             <div class='detail-group'>
-                                <input type='number' value='1' min='1' step='1'>
-                                <button class='cart-button'>
+                                <input name='quantity' type='number' value='1' min='1' step='1'>
+                                <button type='submit' class='cart-button'>
                                     Add to cart
                                 </button>
                             </div>
