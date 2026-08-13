@@ -260,10 +260,33 @@ body {
 #checkout-form {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     gap: 1em;
 }
 .checkout-total {
     font-size: 1em;
+}
+.checkout-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1em;
+}
+.checkout-btn-group {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    align-items: center;
+}
+.checkout-button {
+    padding: 0.5em;
+    border: 1px solid #595959;
+    border-radius: 0.2em;
+    background-color: rgb(13, 87, 16);
+    color: white;
+}
+.checkout-page {
+    display: grid;
+    place-items: center;
 }
 

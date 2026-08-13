@@ -123,10 +123,35 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) ) {
             <div class="checkout">
                 <form id="checkout-form" method="post" action="checkout.php">
                     <?php 
-                    
+                    $total = 0;
+                    foreach( $result_items as $item ) {
+                        $id = $item['id'];
+                        $quantity = $item['quantity'];
+                        $price = $item['price'];
+                        $name = $item['name'];
+                        $total = $total + $price * $quantity;
+                        echo "
+                        <input name='id[]' value='$id' type='hidden'>
+                        <input name='name[]' value='$name' type='hidden'>
+                        <input name='quantity[]' value='$quantity' type='hidden'>
+                        <input name='price[]' value='$price' type='hidden'>
+                        ";
+                    }
                     ?>
-                    <p>Total <span class="price checkout-total">300</span></p>
-                    <button type="submit" name="action" value="checkout">Checkout</button>
+                    <div class="checkout-grid">
+                        <div class="checkout-group">
+                            <label for="customer-name">Your Name</label>
+                            <input type="text" name="customer_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="checkout-group">
+                            <label for="customer-name">Your Email</label>
+                            <input type="text" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="checkout-btn-group">
+                        <div>Total <span class="price checkout-total"><?php echo $total; ?></span></div>
+                        <button class="checkout-button" type="submit" name="action" value="checkout">Checkout</button>
+                    </div>
                 </form>
             </div>
         </div>
